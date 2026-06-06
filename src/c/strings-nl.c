@@ -26,9 +26,9 @@ const char* const RELS_NL[] = {
 };
 
 const char* const MINUTES_NL[60] = {
-  "",                "nul één",         "nul twee",        "nul drie",
-  "nul vier",        "nul vijf",        "nul zes",         "nul zeven",
-  "nul acht",        "nul negen",       "tien",            "elf",
+  "",                "één",             "twee",            "drie",
+  "vier",            "vijf",            "zes",             "zeven",
+  "acht",            "negen",           "tien",            "elf",
   "twaalf",          "dertien",         "veertien",        "vijftien",
   "zestien",         "zeventien",       "achttien",        "negentien",
   "twintig",         "eenentwintig",    "tweeëntwintig",   "drieëntwintig",

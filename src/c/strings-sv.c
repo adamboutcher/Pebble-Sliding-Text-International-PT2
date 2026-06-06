@@ -53,9 +53,9 @@ const char* const RELS_SV[] = {
 };
 
 const char* const MINUTES_SV[60] = {
-  "",            "noll ett",    "noll två",    "noll tre",
-  "noll fyra",   "noll fem",    "noll sex",    "noll sju",
-  "noll åtta",   "noll nio",    "tio",         "elva",
+  "",            "ett",         "två",         "tre",
+  "fyra",        "fem",         "sex",         "sju",
+  "åtta",        "nio",         "tio",         "elva",
   "tolv",        "tretton",     "fjorton",     "femton",
   "sexton",      "sjutton",     "arton",       "nitton",
   "tjugo",       "tjugoett",    "tjugotvå",    "tjugotre",

@@ -28,9 +28,9 @@ const char* const RELS_PT[] = {
 };
 
 const char* const MINUTES_PT[60] = {
-  "",              "oh um",         "oh dois",       "oh três",
-  "oh quatro",     "oh cinco",      "oh seis",       "oh sete",
-  "oh oito",       "oh nove",       "dez",           "onze",
+  "",              "um",            "dois",          "três",
+  "quatro",        "cinco",         "seis",          "sete",
+  "oito",          "nove",          "dez",           "onze",
   "doze",          "treze",         "catorze",       "quinze",
   "dezasseis",     "dezassete",     "dezoito",       "dezanove",
   "vinte",         "vinte e um",    "vinte e dois",  "vinte e três",

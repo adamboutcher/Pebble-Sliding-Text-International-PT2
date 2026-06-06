@@ -53,9 +53,9 @@ const char* const RELS_ES[] = {
 };
 
 const char* const MINUTES_ES[60] = {
-  "",               "oh uno",        "oh dos",        "oh tres",
-  "oh cuatro",      "oh cinco",      "oh seis",       "oh siete",
-  "oh ocho",        "oh nueve",      "diez",          "once",
+  "",               "uno",           "dos",           "tres",
+  "cuatro",         "cinco",         "seis",          "siete",
+  "ocho",           "nueve",         "diez",          "once",
   "doce",           "trece",         "catorce",       "quince",
   "dieciséis",      "diecisiete",    "dieciocho",     "diecinueve",
   "veinte",         "veintiuno",     "veintidós",     "veintitrés",

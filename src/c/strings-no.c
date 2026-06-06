@@ -53,9 +53,9 @@ const char* const RELS_NO[] = {
 };
 
 const char* const MINUTES_NO[60] = {
-  "",           "null ett",   "null to",    "null tre",
-  "null fire",  "null fem",   "null seks",  "null sju",
-  "null åtte",  "null ni",    "ti",         "elleve",
+  "",           "ett",        "to",         "tre",
+  "fire",       "fem",        "seks",       "sju",
+  "åtte",       "ni",         "ti",         "elleve",
   "tolv",       "tretten",    "fjorten",    "femten",
   "seksten",    "sytten",     "atten",      "nitten",
   "tjue",       "tjueen",     "tjueto",     "tjuetre",

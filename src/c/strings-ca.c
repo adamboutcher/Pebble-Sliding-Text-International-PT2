@@ -53,9 +53,9 @@ const char* const RELS_CA[] = {
 };
 
 const char* const MINUTES_CA[60] = {
-  "",              "oh un",        "oh dos",       "oh tres",
-  "oh quatre",     "oh cinc",      "oh sis",       "oh set",
-  "oh vuit",       "oh nou",       "deu",          "onze",
+  "",              "un",           "dos",          "tres",
+  "quatre",        "cinc",         "sis",          "set",
+  "vuit",          "nou",          "deu",          "onze",
   "dotze",         "tretze",       "catorze",      "quinze",
   "setze",         "disset",       "divuit",       "dinou",
   "vint",          "vint-i-un",    "vint-i-dos",   "vint-i-tres",

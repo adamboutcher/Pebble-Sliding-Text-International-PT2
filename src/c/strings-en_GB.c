@@ -65,9 +65,9 @@ const char* const DAYS_EN_GB[] = {
 const char* const DATE_FORMAT_EN_GB = "$1  $3 $2 ";
 
 const char* const MINUTES_EN_GB[60] = {
-  "",             "oh one",      "oh two",      "oh three",
-  "oh four",      "oh five",     "oh six",      "oh seven",
-  "oh eight",     "oh nine",     "ten",         "eleven",
+  "",             "one",         "two",         "three",
+  "four",         "five",        "six",         "seven",
+  "eight",        "nine",        "ten",         "eleven",
   "twelve",       "thirteen",    "fourteen",    "fifteen",
   "sixteen",      "seventeen",   "eighteen",    "nineteen",
   "twenty",       "twenty one",  "twenty two",  "twenty three",

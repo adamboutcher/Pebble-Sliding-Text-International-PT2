@@ -53,9 +53,9 @@ const char* const RELS_DE[] = {
 };
 
 const char* const MINUTES_DE[60] = {
-  "",                  "null eins",         "null zwei",         "null drei",
-  "null vier",         "null fünf",         "null sechs",        "null sieben",
-  "null acht",         "null neun",         "zehn",              "elf",
+  "",                  "eins",              "zwei",              "drei",
+  "vier",              "fünf",              "sechs",             "sieben",
+  "acht",              "neun",              "zehn",              "elf",
   "zwölf",             "dreizehn",          "vierzehn",          "fünfzehn",
   "sechzehn",          "siebzehn",          "achtzehn",          "neunzehn",
   "zwanzig",           "einundzwanzig",     "zweiundzwanzig",    "dreiundzwanzig",
