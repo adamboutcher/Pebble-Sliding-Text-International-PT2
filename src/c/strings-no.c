@@ -52,4 +52,22 @@ const char* const RELS_NO[] = {
   "fem på *$2"
 };
 
+const char* const MINUTES_NO[60] = {
+  "",           "null ett",   "null to",    "null tre",
+  "null fire",  "null fem",   "null seks",  "null sju",
+  "null åtte",  "null ni",    "ti",         "elleve",
+  "tolv",       "tretten",    "fjorten",    "femten",
+  "seksten",    "sytten",     "atten",      "nitten",
+  "tjue",       "tjueen",     "tjueto",     "tjuetre",
+  "tjuefire",   "tjuefem",    "tjueseks",   "tjuesju",
+  "tjueåtte",   "tjueni",     "tretti",     "trettien",
+  "trettito",   "trettitre",  "trettifire", "trettifem",
+  "trettiseks", "trettisju",  "trettiåtte", "trettini",
+  "førti",      "førtien",    "førtito",    "førtitre",
+  "førtifire",  "førtifem",   "førtiseks",  "førtisju",
+  "førtiåtte",  "førtini",    "femti",      "femtien",
+  "femtito",    "femtitre",   "femtifire",  "femtifem",
+  "femtiseks",  "femtisju",   "femtiåtte",  "femtini"
+};
+
 const char* date_suffix_NO(int date) { return ""; }

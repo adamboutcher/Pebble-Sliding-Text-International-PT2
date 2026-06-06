@@ -60,4 +60,22 @@ const char* const RELS_FR[] = {
 // - "*$2 heures moins vingt-cinq" -> "*$2 moins vingt-cinq"
 // - "*$2 heures moins le quart" -> "*$2 moins le quart"
 
+const char* const MINUTES_FR[60] = {
+  "",               "zéro un",       "zéro deux",     "zéro trois",
+  "zéro quatre",    "zéro cinq",     "zéro six",      "zéro sept",
+  "zéro huit",      "zéro neuf",     "dix",           "onze",
+  "douze",          "treize",        "quatorze",      "quinze",
+  "seize",          "dix-sept",      "dix-huit",      "dix-neuf",
+  "vingt",          "vingt et un",   "vingt-deux",    "vingt-trois",
+  "vingt-quatre",   "vingt-cinq",    "vingt-six",     "vingt-sept",
+  "vingt-huit",     "vingt-neuf",    "trente",        "trente et un",
+  "trente-deux",    "trente-trois",  "trente-quatre", "trente-cinq",
+  "trente-six",     "trente-sept",   "trente-huit",   "trente-neuf",
+  "quarante",       "quarante et un","quarante-deux", "quarante-trois",
+  "quarante-quatre","quarante-cinq", "quarante-six",  "quarante-sept",
+  "quarante-huit",  "quarante-neuf", "cinquante",     "cinquante et un",
+  "cinquante-deux", "cinquante-trois","cinquante-quatre","cinquante-cinq",
+  "cinquante-six",  "cinquante-sept","cinquante-huit","cinquante-neuf"
+};
+
 const char* date_suffix_FR(int date) { return ""; }

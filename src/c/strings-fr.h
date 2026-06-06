@@ -2,5 +2,6 @@
 
 extern const char* const HOURS_FR[24];
 extern const char* const RELS_FR[12];
+extern const char* const MINUTES_FR[60];
 
 const char* date_suffix_FR(int date);

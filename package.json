@@ -2,12 +2,12 @@
     "author": "Adam Boutcher",
     "dependencies": {},
     "keywords": [],
-    "name": "natural-text-int-l",
+    "name": "sliding-text-int-l",
     "pebble": {
         "capabilities": [
             "configurable"
         ],
-        "displayName": "Natural Text International",
+        "displayName": "Sliding Text International",
         "enableMultiJS": false,
         "messageKeys": [],
         "projectType": "native",

@@ -52,4 +52,22 @@ const char* const RELS_CA[] = {
   "tres quarts i deu de *$2"
 };
 
+const char* const MINUTES_CA[60] = {
+  "",              "oh un",        "oh dos",       "oh tres",
+  "oh quatre",     "oh cinc",      "oh sis",       "oh set",
+  "oh vuit",       "oh nou",       "deu",          "onze",
+  "dotze",         "tretze",       "catorze",      "quinze",
+  "setze",         "disset",       "divuit",       "dinou",
+  "vint",          "vint-i-un",    "vint-i-dos",   "vint-i-tres",
+  "vint-i-quatre", "vint-i-cinc",  "vint-i-sis",   "vint-i-set",
+  "vint-i-vuit",   "vint-i-nou",   "trenta",       "trenta-un",
+  "trenta-dos",    "trenta-tres",  "trenta-quatre", "trenta-cinc",
+  "trenta-sis",    "trenta-set",   "trenta-vuit",  "trenta-nou",
+  "quaranta",      "quaranta-un",  "quaranta-dos", "quaranta-tres",
+  "quaranta-quatre","quaranta-cinc","quaranta-sis","quaranta-set",
+  "quaranta-vuit", "quaranta-nou", "cinquanta",    "cinquanta-un",
+  "cinquanta-dos", "cinquanta-tres","cinquanta-quatre","cinquanta-cinc",
+  "cinquanta-sis", "cinquanta-set","cinquanta-vuit","cinquanta-nou"
+};
+
 const char* date_suffix_CA(int date) { return ""; }

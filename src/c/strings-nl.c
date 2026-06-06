@@ -25,4 +25,22 @@ const char* const RELS_NL[] = {
   "vijf voor *$2"
 };
 
+const char* const MINUTES_NL[60] = {
+  "",                "nul één",         "nul twee",        "nul drie",
+  "nul vier",        "nul vijf",        "nul zes",         "nul zeven",
+  "nul acht",        "nul negen",       "tien",            "elf",
+  "twaalf",          "dertien",         "veertien",        "vijftien",
+  "zestien",         "zeventien",       "achttien",        "negentien",
+  "twintig",         "eenentwintig",    "tweeëntwintig",   "drieëntwintig",
+  "vierentwintig",   "vijfentwintig",   "zesentwintig",    "zevenentwintig",
+  "achtentwintig",   "negenentwintig",  "dertig",          "eenendertig",
+  "tweeëndertig",    "drieëndertig",    "vierendertig",    "vijfendertig",
+  "zesendertig",     "zevenendertig",   "achtendertig",    "negenendertig",
+  "veertig",         "eenenveertig",    "tweeënveertig",   "drieënveertig",
+  "vierenveertig",   "vijfenveertig",   "zesenveertig",    "zevenenveertig",
+  "achtenveertig",   "negenenveertig",  "vijftig",         "eenenvijftig",
+  "tweeënvijftig",   "drieënvijftig",   "vierenvijftig",   "vijfenvijftig",
+  "zesenvijftig",    "zevenenvijftig",  "achtenvijftig",   "negenenvijftig"
+};
+
 const char* date_suffix_NL(int date) { return ""; }
