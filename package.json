@@ -2,12 +2,12 @@
     "author": "Adam Boutcher",
     "dependencies": {},
     "keywords": [],
-    "name": "natural-text-int-l",
+    "name": "sliding-text-int-l",
     "pebble": {
         "capabilities": [
             "configurable"
         ],
-        "displayName": "Natural Text International",
+        "displayName": "Sliding Text International",
         "enableMultiJS": false,
         "messageKeys": [],
         "projectType": "native",
@@ -37,7 +37,7 @@
             "gabbro",
             "flint"
         ],
-        "uuid": "838547c9-dbc0-411a-9566-089201bbbed2",
+        "uuid": "ca4d31a2-5a13-49aa-93dd-3454850020b6",
         "watchapp": {
             "watchface": true
         }

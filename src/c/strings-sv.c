@@ -52,4 +52,22 @@ const char* const RELS_SV[] = {
   "fem i *$2"
 };
 
+const char* const MINUTES_SV[60] = {
+  "",            "ett",         "två",         "tre",
+  "fyra",        "fem",         "sex",         "sju",
+  "åtta",        "nio",         "tio",         "elva",
+  "tolv",        "tretton",     "fjorton",     "femton",
+  "sexton",      "sjutton",     "arton",       "nitton",
+  "tjugo",       "tjugoett",    "tjugotvå",    "tjugotre",
+  "tjugofyra",   "tjugofem",    "tjugosex",    "tjugosju",
+  "tjugoåtta",   "tjugonio",    "trettio",     "trettioett",
+  "trettiotvå",  "trettiotre",  "trettiofyra", "trettiofem",
+  "trettiosex",  "trettiosju",  "trettioåtta", "trettionio",
+  "fyrtio",      "fyrtioett",   "fyrtiotvå",   "fyrtiotre",
+  "fyrtiofyra",  "fyrtiofem",   "fyrtiosex",   "fyrtiosju",
+  "fyrtioåtta",  "fyrtionio",   "femtio",      "femtioett",
+  "femtiotvå",   "femtiotre",   "femtiofyra",  "femtiofem",
+  "femtiosex",   "femtiosju",   "femtioåtta",  "femtionio"
+};
+
 const char* date_suffix_SV(int date) { return ""; }

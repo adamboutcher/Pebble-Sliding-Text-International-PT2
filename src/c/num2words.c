@@ -79,10 +79,11 @@ char * itoa10(int value, char *result)
 typedef struct {
   const char* const* hours;
   const char* const* rels;
+  const char* const* minutes;
 } LangStrings;
 
 static const LangStrings lang_strings[] = {
-  #define X(ENUM, VAL) [ENUM] = { HOURS_##ENUM, RELS_##ENUM },
+  #define X(ENUM, VAL) [ENUM] = { HOURS_##ENUM, RELS_##ENUM, MINUTES_##ENUM },
   ALL_LANGUAGES
   #undef X
 };
@@ -95,38 +96,28 @@ const char* get_rel(Language lang, int index) {
   return lang_strings[lang].rels[index];
 }
 
+const char* get_minute(Language lang, int index) {
+  return lang_strings[lang].minutes[index];
+}
+
 void time_to_words(Language lang, int hours, int minutes, int seconds, char* words, size_t buffer_size) {
+  (void)seconds;
 
   size_t remaining = buffer_size;
   memset(words, 0, buffer_size);
 
-  // We want to operate with a resolution of 30 seconds.  So multiply
-  // minutes and seconds by 2.  Then divide by (2 * 5) to carve the hour
-  // into five minute intervals.
-  // TODO: the seconds term is dead code - the tick handler uses MINUTE_UNIT
-  // so seconds is always 0. The 30-second resolution was never active.
-  // Consider simplifying to: int rel_index = ((minutes * 2 + 5) / 10) % 12;
-  // and dropping the seconds parameter from this function entirely.
-  int half_mins  = (2 * minutes) + (seconds / 30);
-  int rel_index  = ((half_mins + 5) / (2 * 5)) % 12;
-  int hour_index;
+  const char* hour = get_hour(lang, hours % 12);
+  const char* mins = get_minute(lang, minutes);
 
-  if (rel_index == 0 && minutes > 30) {
-    hour_index = (hours + 1) % 24;
-  }
-  else {
-    hour_index = hours % 24;
+  remaining -= append_string(words, remaining, "*");
+  remaining -= append_string(words, remaining, hour);
+
+  if (minutes > 0) {
+    remaining -= append_string(words, remaining, " ");
+    remaining -= append_string(words, remaining, mins);
   }
 
-  const char* hour = get_hour(lang, hour_index);
-  const char* next_hour = get_hour(lang, (hour_index + 1) % 24);
-  const char* rel  = get_rel(lang, rel_index);
-
-  remaining -= interpolate_and_append(words, remaining, rel, hour, next_hour);
-
-  // Leave one space at the end
   remaining -= append_string(words, remaining, " ");
-
 }
 
 const char* get_day(Language lang, int index) {
