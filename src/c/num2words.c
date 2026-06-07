@@ -22,33 +22,6 @@ static size_t append_string(char* buffer, const size_t length, const char* str) 
   return (length > written) ? written : length;
 }
 
-static size_t interpolate_and_append(char* buffer, const size_t length,
-    const char* parent_str, const char* first_placeholder_str, const char* second_placeholder_str) {
-  const char* placeholder_str;
-  char* insert_ptr = strstr(parent_str, "$1");
-
-  if (insert_ptr) {
-    placeholder_str = first_placeholder_str;
-  }
-  else {
-    insert_ptr = strstr(parent_str, "$2");
-    placeholder_str = second_placeholder_str;
-  }
-
-  size_t parent_len = strlen(parent_str);
-  size_t insert_offset = insert_ptr ? (size_t) insert_ptr - (size_t) parent_str : parent_len;
-
-  size_t remaining = length;
-
-  remaining -= append_string(buffer, min(insert_offset, remaining), parent_str);
-  remaining -= append_string(buffer, remaining, placeholder_str);
-  if (insert_ptr) {
-    remaining -= append_string(buffer, remaining, insert_ptr + 2);
-  }
-
-  return remaining;
-}
-
 /* simple base 10 only itoa, found: http://stackoverflow.com/questions/20435527 */
 char * itoa10(int value, char *result)
 {
