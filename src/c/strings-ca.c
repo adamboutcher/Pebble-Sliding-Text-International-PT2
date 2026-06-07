@@ -53,7 +53,7 @@ const char* const RELS_CA[] = {
 };
 
 const char* const MINUTES_CA[60] = {
-  "",              "un",           "dos",          "tres",
+  "en punt",       "un",           "dos",          "tres",
   "quatre",        "cinc",         "sis",          "set",
   "vuit",          "nou",          "deu",          "onze",
   "dotze",         "tretze",       "catorze",      "quinze",

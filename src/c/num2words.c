@@ -112,7 +112,7 @@ void time_to_words(Language lang, int hours, int minutes, int seconds, char* wor
   remaining -= append_string(words, remaining, "*");
   remaining -= append_string(words, remaining, hour);
 
-  if (minutes > 0) {
+  if (mins[0] != '\0') {
     remaining -= append_string(words, remaining, " ");
     remaining -= append_string(words, remaining, mins);
   }

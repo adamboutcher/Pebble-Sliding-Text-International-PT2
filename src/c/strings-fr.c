@@ -61,7 +61,7 @@ const char* const RELS_FR[] = {
 // - "*$2 heures moins le quart" -> "*$2 moins le quart"
 
 const char* const MINUTES_FR[60] = {
-  "",               "un",            "deux",          "trois",
+  "heures",         "un",            "deux",          "trois",
   "quatre",         "cinq",          "six",           "sept",
   "huit",           "neuf",          "dix",           "onze",
   "douze",          "treize",        "quatorze",      "quinze",
