@@ -732,17 +732,6 @@ static void window_load(Window *window)
 	t_buf = *localtime(&raw_time);
 	display_initial_time(t);
 
-	Tuplet initial_values[] = {
-		TupletInteger(TEXT_ALIGN_KEY,    (uint8_t) text_align),
-		TupletInteger(INVERT_KEY,        (uint8_t) invert ? 1 : 0),
-		TupletInteger(LANGUAGE_KEY,      (uint8_t) lang),
-		TupletInteger(FONT_SIZE_KEY,     (uint8_t) font_size),
-		TupletInteger(SHOW_DATE_KEY,     (uint8_t) show_date ? 1 : 0),
-		TupletInteger(DATE_TIMEOUT_KEY,  (uint8_t) date_timeout_idx)
-	};
-
-	app_sync_init(&sync, sync_buffer, sizeof(sync_buffer), initial_values, ARRAY_LENGTH(initial_values),
-			sync_tuple_changed_callback, sync_error_callback, NULL);
 }
 
 static void window_unload(Window *window)
@@ -800,13 +789,21 @@ static void handle_init() {
 		.appear = window_appear
 	});
 
-	// Initialize message queue
-	const int inbound_size = 64;
-	const int outbound_size = 64;
-	app_message_open(inbound_size, outbound_size);
+	app_message_open(app_message_inbox_size_maximum(), app_message_outbox_size_maximum());
 
 	const bool animated = true;
 	window_stack_push(window, animated);
+
+	Tuplet initial_values[] = {
+		TupletInteger(TEXT_ALIGN_KEY,    (uint8_t) text_align),
+		TupletInteger(INVERT_KEY,        (uint8_t) invert ? 1 : 0),
+		TupletInteger(LANGUAGE_KEY,      (uint8_t) lang),
+		TupletInteger(FONT_SIZE_KEY,     (uint8_t) font_size),
+		TupletInteger(SHOW_DATE_KEY,     (uint8_t) show_date ? 1 : 0),
+		TupletInteger(DATE_TIMEOUT_KEY,  (uint8_t) date_timeout_idx)
+	};
+	app_sync_init(&sync, sync_buffer, sizeof(sync_buffer), initial_values, ARRAY_LENGTH(initial_values),
+		sync_tuple_changed_callback, sync_error_callback, NULL);
   
 	if (show_date) {
 		accel_tap_service_subscribe(tap_handler);
