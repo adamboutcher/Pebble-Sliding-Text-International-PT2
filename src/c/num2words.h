@@ -13,13 +13,11 @@
  *   4. Add the language to pebble-js-app.js and config-html.js
  */
 #define ALL_LANGUAGES  \
-  X(CA,    0x0)        \
   X(DE,    0x1)        \
   X(EN_GB, 0x2)        \
   X(EN_US, 0x3)        \
   X(ES,    0x4)        \
   X(FR,    0x5)        \
-  X(NO,    0x6)        \
   X(SV,    0x7)        \
   X(NL,    0x8)        \
   X(PT,    0x9)

@@ -11,13 +11,11 @@ var alignments = {
 
 // langs values must match the Language enum in src/c/num2words.h
 var langs = {
-  ca:    0,
   de:    1,
   en_GB: 2,
   en_US: 3,
   es:    4,
   fr:    5,
-  no:    6,
   sv:    7,
   nl:    8,
   pt:    9
