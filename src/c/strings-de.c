@@ -53,7 +53,7 @@ const char* const RELS_DE[] = {
 };
 
 const char* const MINUTES_DE[60] = {
-  "",                  "eins",              "zwei",              "drei",
+  "Uhr",               "eins",              "zwei",              "drei",
   "vier",              "fünf",              "sechs",             "sieben",
   "acht",              "neun",              "zehn",              "elf",
   "zwölf",             "dreizehn",          "vierzehn",          "fünfzehn",

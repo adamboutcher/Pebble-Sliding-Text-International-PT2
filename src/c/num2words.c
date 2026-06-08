@@ -1,11 +1,9 @@
 #include "num2words.h"
-#include "strings-ca.h"
 #include "strings-de.h"
 #include "strings-en_GB.h"
 #include "strings-en_US.h"
 #include "strings-es.h"
 #include "strings-fr.h"
-#include "strings-no.h"
 #include "strings-sv.h"
 #include "strings-nl.h"
 #include "strings-pt.h"
@@ -20,33 +18,6 @@ static size_t append_string(char* buffer, const size_t length, const char* str) 
 
   size_t written = strlen(str);
   return (length > written) ? written : length;
-}
-
-static size_t interpolate_and_append(char* buffer, const size_t length,
-    const char* parent_str, const char* first_placeholder_str, const char* second_placeholder_str) {
-  const char* placeholder_str;
-  char* insert_ptr = strstr(parent_str, "$1");
-
-  if (insert_ptr) {
-    placeholder_str = first_placeholder_str;
-  }
-  else {
-    insert_ptr = strstr(parent_str, "$2");
-    placeholder_str = second_placeholder_str;
-  }
-
-  size_t parent_len = strlen(parent_str);
-  size_t insert_offset = insert_ptr ? (size_t) insert_ptr - (size_t) parent_str : parent_len;
-
-  size_t remaining = length;
-
-  remaining -= append_string(buffer, min(insert_offset, remaining), parent_str);
-  remaining -= append_string(buffer, remaining, placeholder_str);
-  if (insert_ptr) {
-    remaining -= append_string(buffer, remaining, insert_ptr + 2);
-  }
-
-  return remaining;
 }
 
 /* simple base 10 only itoa, found: http://stackoverflow.com/questions/20435527 */
@@ -112,7 +83,7 @@ void time_to_words(Language lang, int hours, int minutes, int seconds, char* wor
   remaining -= append_string(words, remaining, "*");
   remaining -= append_string(words, remaining, hour);
 
-  if (minutes > 0) {
+  if (mins[0] != '\0') {
     remaining -= append_string(words, remaining, " ");
     remaining -= append_string(words, remaining, mins);
   }

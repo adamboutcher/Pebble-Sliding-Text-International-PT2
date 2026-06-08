@@ -12,7 +12,7 @@
 
 #define NUM_LINES 4
 #define LINE_LENGTH 7
-#define BUFFER_SIZE (LINE_LENGTH + 2)
+#define BUFFER_SIZE 20  // sized for longest word in any supported language (de: siebenundzwanzig = 16)
 #define TOP_MARGIN 10
 #define SIDE_MARGIN 2
 

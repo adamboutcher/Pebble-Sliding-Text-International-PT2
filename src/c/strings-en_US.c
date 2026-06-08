@@ -81,7 +81,7 @@ const char* const DAYS_EN_US[] = {
 const char* const DATE_FORMAT_EN_US = "$1  $2 $3 ";
 
 const char* const MINUTES_EN_US[60] = {
-  "",             "one",         "two",         "three",
+  "o'clock",      "one",         "two",         "three",
   "four",         "five",        "six",         "seven",
   "eight",        "nine",        "ten",         "eleven",
   "twelve",       "thirteen",    "fourteen",    "fifteen",
