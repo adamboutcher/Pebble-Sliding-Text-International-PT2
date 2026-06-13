@@ -1,47 +1,53 @@
-Fuzzy Text International
-========================
+Sliding Text International
+==========================
 
-This is a watchface for the [Pebble][].  It is originally based on the
-[PebbleTextWatch][] by Mihai Dumitrache, which reproduced the look of
-the Text Watch that comes standard with the Pebble.
+A watchface for the [Pebble][] that displays the exact time as spoken words —
+"**twelve** twenty four", "**five** fifty six" — with a smooth staggered
+slide animation between lines.
 
 [Pebble]: https://getpebble.com/
+
+Based on the original [PebbleTextWatch][] by Mihai Dumitrache, the
+[Swedish fuzzy text watch][] by Mattias Bäcklund, and the multi-language
+[Fuzzy Text International][] by Jesse Hallett.
+
 [PebbleTextWatch]: https://github.com/wearewip/PebbleTextWatch
-
-Mattias Bäcklund created a modified version, [Swedish fuzzy text
-watch][], that displays fuzzy time.  Mattias wanted to combine the
-elegant layout and animations of the Text Watch with the natural
-language of the Fuzzy Time watchface, and wanted it in his native
-language, Swedish.
-
 [Swedish fuzzy text watch]: https://github.com/Sarastro72/Swedish-Fuzzy-Text-watch
+[Fuzzy Text International]: https://github.com/hallettj/Fuzzy-Text-International
 
-This version builds upon the work by Mihai and Mattias: it supports
-multiple languages, and provides options to change the visual style.
 
-Features:
+Features
+--------
 
- - Fuzzy time in natural language
- - The large and easy to read fonts of the original Text Watch
- - Nice staggered animation
- - Between one and four lines of text, depending on need
- - Smaller words may share a single line (such as "fem i")
+- Exact time in natural language (e.g. "**eight** thirty one")
+- On the hour shows the o'clock equivalent ("**five** o'clock", "**fünf** Uhr")
+- Large, easy-to-read fonts with a staggered slide animation
+- Up to four lines of text; short words share a line where they fit
+- Shake to show the date, with configurable auto-revert timeout
 
-The following options can be configured, using the Pebble app on your
-phone:
+The following options can be configured via the Pebble app on your phone:
 
-- Invert colors (white-on-black or black-on-white)
-- Text alignment (centered, left, or right)
-- Language
+- **Language** — see list below
+- **Invert colors** — white-on-black or black-on-white
+- **Text alignment** — centre, left, or right
+- **Font size** — small, medium, or large
+- **Show date on shake** — enable/disable
+- **Date view timeout** — 3 s, 5 s, 8 s, 1 min, or never
 
-At this time the included languages are:
 
-- English
-- French
-- German
-- Norwegian
-- Spanish
-- Swedish
+Languages
+---------
+
+| Language | Code |
+|---|---|
+| Deutsch | `de` |
+| English (Great Britain) | `en_GB` |
+| English (United States) | `en_US` |
+| Español | `es` |
+| Français | `fr` |
+| Nederlands | `nl` |
+| Português | `pt` |
+| Svenska | `sv` |
 
 
 Authors
@@ -49,33 +55,24 @@ Authors
 
 Thanks to all of the people who made this watchface possible:
 
-- [Mihai Dumitrache][Mihai], implemented an open source version of Text Watch
-- [Mattias Bäcklund][Mattias], created Swedish fuzzy text watch
-- [Jesse Hallett][Jesse], added configuration options and multiple language support
-- [Filip Horvei][iFlips], provided Norwegian translation
-- Tomi De Lucca, discovered fix for a severe iOS bug & assisted with Spanish translation
+- [Mihai Dumitrache][Mihai] — original open source Text Watch
+- [Mattias Bäcklund][Mattias] — Swedish fuzzy text watch
+- [Jesse Hallett][Jesse] — configuration options and multi-language support
+- [Filip Horvei][iFlips] — Norwegian translation (original fuzzy-time version)
+- Tomi De Lucca — iOS bug fix and Spanish translation assistance
+- [Adam Boutcher][Adam] — exact time display, additional languages, PT2 fork
 
 [Mihai]: https://github.com/mmdumi
 [Mattias]: https://github.com/Sarastro72
 [Jesse]: https://github.com/hallettj
 [iFlips]: https://github.com/iFlips
+[Adam]: https://github.com/adamboutcher
 
 
 Contributing
 ------------
 
-If you would like to request a translation, provide a translation, or
-point out errors in a translation, please [open an issue][issue].
+To add a new language, see the instructions in `CLAUDE.md`.
 
-[issue]: https://github.com/hallettj/Fuzzy-Text-International/issues/new
-
-For an example of what is needed for translations, take a look at
-[`strings-en.c`][en].  In case you want to implement a translation
-yourself, look at [818e076][es] to see all of the code changes that are
-necessary to do so.
-
-[en]: https://github.com/hallettj/Fuzzy-Text-International/blob/master/src/strings-en.c
-[es]: https://github.com/hallettj/Fuzzy-Text-International/commit/818e07686761adc00245986f6d389076534a5c1a
-
-Please feel free to open issues for matters other than translations!
-Pull requests are welcome as well.
+Please feel free to open issues for bug reports, translation corrections,
+or feature requests. Pull requests are welcome.
