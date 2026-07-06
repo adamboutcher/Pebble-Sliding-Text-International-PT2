@@ -70,4 +70,16 @@ const char* const MINUTES_DE[60] = {
   "sechsundfünfzig",   "siebenundfünfzig",  "achtundfünfzig",    "neunundfünfzig"
 };
 
-const char* date_suffix_DE(int date) { return ""; }
+const char* const MONTHS_DE[] = {
+  "jan", "feb", "mär", "apr", "mai", "jun",
+  "jul", "aug", "sep", "okt", "nov", "dez"
+};
+
+const char* const DAYS_DE[] = {
+  "so", "mo", "di", "mi", "do", "fr", "sa"
+};
+
+// $1 = day name, $2 = month name, $3 = date number (with suffix)
+const char DATE_FORMAT_DE[] = "$1  $3 $2 ";
+
+const char* date_suffix_DE(int date) { return "."; }
